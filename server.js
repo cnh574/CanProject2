@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const app = express();
 const db = mongoose.connection;
 require("dotenv").config();
+const shadesController = require("./controllers/controller.js");
 //___________________
 //Port
 //___________________
@@ -45,13 +46,15 @@ app.use(express.json()); // returns middleware that only parses JSON - may or ma
 //use method override
 app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 
-//___________________
+//____
+
+app.use("/shades", shadesController);
 // Routes
 //___________________
 //localhost:3000
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello World!");
+// });
 
 //___________________
 //Listener
