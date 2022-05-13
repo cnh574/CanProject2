@@ -52,10 +52,10 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 app.use("/shades", shadesController);
 // Routes
 //___________________
-//localhost:3000
-// app.get("/", (req, res) => {
-//   res.send("Hello World!");
-// });
+localhost: 3000;
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 //___________________
 //Listener
