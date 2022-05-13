@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('./partials/head.ejs') %>
+  <body>
+    <div class="container">
+      <% for (let i = 0; i < shade.length; i++) { %>
+      <div class="shades-home-page">
+        <h1><%=shade[i].name%></h1>
+        <a href="/shades/<%=shade[i].name%>">
+          <img src="<%=shade[i].image%>" />
+        </a>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
