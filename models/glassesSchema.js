@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const glassesSchema = new mongoose.Schema({
+const glassesSchema = new Schema({
   name: String,
   style: String,
   color: String,

@@ -2,13 +2,14 @@
 //Dependencies
 //___________________
 const express = require("express");
-const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const app = express();
 const db = mongoose.connection;
 require("dotenv").config();
-const shadesController = require("./controllers/controller.js");
-
+// const shadesController = require("./");
+const Shade = require("./models/glassesSchema.js");
+const seedData = require("./models/sunShades.js");
+const methodOverride = require("method-override");
 //___________________
 //Port
 //___________________
@@ -49,15 +50,81 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 
 //____
 
-app.use("/shades", shadesController);
 // Routes
 //___________________
 localhost: 3000;
-app.get("/", (req, res) => {
+app.get("/shades", (req, res) => {
   res.send("Hello World!");
+  // res.redirect("/shades");
 });
 
 //___________________
 //Listener
 //___________________
 app.listen(PORT, () => console.log("Listening on port:", PORT));
+
+// SEED DATA ROUTE
+app.get("/seed", (req, res) => {
+  Shade.create(seedData, (err, createdSeedData) => {
+    console.log("data imported");
+    res.redirect("/shades");
+  });
+});
+
+// // NEW shades view  ROUTE
+app.get("/new", (req, res) => {
+  res.render("new.ejs");
+});
+
+// CREATE NEW Shades  post ROUTE
+app.post("/", (req, res) => {
+  Shade.create(req.body, (error, createdshades) => {
+    res.redirect("/shades");
+  });
+});
+
+// GET ALL shades FOR INDEX ROUTE
+app.get("/", (req, res) => {
+  Shade.find({}, (error, allShades) => {
+    res.render("index.ejs", {
+      shade: allShades,
+    });
+  });
+});
+
+// SHOW SPECIFIC shades ROUTE
+app.get("/:id", (req, res) => {
+  Shade.findById(req.params.id, (err, foundShades) => {
+    res.render("show.ejs", {
+      shade: foundShades,
+    });
+  });
+});
+
+// DELETE SPECIFIC shades ROUTE
+app.delete("/:id", (req, res) => {
+  Shade.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect("/shades");
+  });
+});
+
+// EDIT EXISTING shades PAGE ROUTE
+app.get("/:id/edit", (req, res) => {
+  Shade.findById(req.params.id, (err, foundShades) => {
+    res.render("edit.ejs", {
+      shade: foundShades,
+    });
+  });
+});
+
+// EDIT A SPECIFIC shades ROUTE
+app.put("/:id", (req, res) => {
+  Shade.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedModel) => {
+      res.redirect("/shades");
+    }
+  );
+});
