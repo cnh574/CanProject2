@@ -53,7 +53,7 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 localhost: 3000;
-app.get("/shades", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Hello World!");
   // res.redirect("/shades");
 });
@@ -76,55 +76,55 @@ app.get("/new", (req, res) => {
   res.render("new.ejs");
 });
 
-// CREATE NEW Shades  post ROUTE
+// // CREATE NEW Shades  post ROUTE
 app.post("/", (req, res) => {
   Shade.create(req.body, (error, createdshades) => {
-    res.redirect("/shades");
+    res.redirect("/");
   });
 });
 
-// GET ALL shades FOR INDEX ROUTE
+// // GET ALL shades FOR INDEX ROUTE
 app.get("/", (req, res) => {
   Shade.find({}, (error, allShades) => {
     res.render("index.ejs", {
-      shade: allShades,
+      shades: allShades,
     });
   });
 });
 
-// SHOW SPECIFIC shades ROUTE
-app.get("/:id", (req, res) => {
+// // SHOW SPECIFIC shades ROUTE
+app.get("/shades/:id", (req, res) => {
   Shade.findById(req.params.id, (err, foundShades) => {
     res.render("show.ejs", {
-      shade: foundShades,
+      shades: foundShades,
     });
   });
 });
 
-// DELETE SPECIFIC shades ROUTE
+// // DELETE SPECIFIC shades ROUTE
 app.delete("/:id", (req, res) => {
   Shade.findByIdAndRemove(req.params.id, (err, data) => {
-    res.redirect("/shades");
+    res.redirect("/");
   });
 });
 
-// EDIT EXISTING shades PAGE ROUTE
+// // EDIT EXISTING shades PAGE ROUTE
 app.get("/:id/edit", (req, res) => {
   Shade.findById(req.params.id, (err, foundShades) => {
     res.render("edit.ejs", {
-      shade: foundShades,
+      shades: foundShades,
     });
   });
 });
 
-// EDIT A SPECIFIC shades ROUTE
+// // EDIT A SPECIFIC shades ROUTE
 app.put("/:id", (req, res) => {
   Shade.findByIdAndUpdate(
     req.params.id,
     req.body,
     { new: true },
     (err, updatedModel) => {
-      res.redirect("/shades");
+      res.redirect("/");
     }
   );
 });
