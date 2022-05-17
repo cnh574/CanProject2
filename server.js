@@ -63,11 +63,15 @@ app.get("/seed", (req, res) => {
 app.get("/new", (req, res) => {
   res.render("new.ejs");
 });
+// home page
+app.get("/home", (req, res) => {
+  res.render("home.ejs");
+});
 
 // // CREATE NEW Shades  post ROUTE
 app.post("/", (req, res) => {
   Shade.create(req.body, (error, createdshades) => {
-    res.redirect("/shades");
+    res.redirect("/");
   });
 });
 
