@@ -22,13 +22,6 @@ const PORT = process.env.PORT;
 // How to connect to the database either via heroku or locally
 const MONGODB_URI = process.env.MONGODB_URI;
 
-// Connect to Mongo &
-// Fix Depreciation Warnings from Mongoose
-// May or may not need these depending on your Mongoose version
-mongoose.connect(MONGODB_URI, () => {
-  console.log("connect to mongo");
-});
-
 // Error / success
 db.on("error", (err) => console.log(err.message + " is Mongod not running?"));
 db.on("connected", () => console.log("mongo connected: ", MONGODB_URI));
@@ -52,22 +45,17 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 
 // Routes
 //___________________
-localhost: 3000;
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-  // res.redirect("/shades");
-});
-
-//___________________
-//Listener
-//___________________
-app.listen(PORT, () => console.log("Listening on port:", PORT));
+// localhost: 3000;
+// app.get("/", (req, res) => {
+//   res.send("Hello World!");
+//
+// });
 
 // SEED DATA ROUTE
 app.get("/seed", (req, res) => {
   Shade.create(seedData, (err, createdSeedData) => {
     console.log("data imported");
-    res.redirect("/shades");
+    res.redirect("/");
   });
 });
 
@@ -79,7 +67,7 @@ app.get("/new", (req, res) => {
 // // CREATE NEW Shades  post ROUTE
 app.post("/", (req, res) => {
   Shade.create(req.body, (error, createdshades) => {
-    res.redirect("/");
+    res.redirect("/shades");
   });
 });
 
@@ -102,29 +90,41 @@ app.get("/shades/:id", (req, res) => {
 });
 
 // // DELETE SPECIFIC shades ROUTE
-app.delete("/:id", (req, res) => {
-  Shade.findByIdAndRemove(req.params.id, (err, data) => {
-    res.redirect("/");
-  });
-});
+// app.delete("/:id", (req, res) => {
+//   Shade.findByIdAndRemove(req.params.id, (err, data) => {
+//     res.redirect("/");
+//   });
+// });
 
 // // EDIT EXISTING shades PAGE ROUTE
-app.get("/:id/edit", (req, res) => {
-  Shade.findById(req.params.id, (err, foundShades) => {
-    res.render("edit.ejs", {
-      shades: foundShades,
-    });
-  });
-});
+// app.get("/:id/edit", (req, res) => {
+//   Shade.findById(req.params.id, (err, foundShades) => {
+//     res.render("edit.ejs", {
+//       shades: foundShades,
+//     });
+//   });
+// });
 
 // // EDIT A SPECIFIC shades ROUTE
-app.put("/:id", (req, res) => {
-  Shade.findByIdAndUpdate(
-    req.params.id,
-    req.body,
-    { new: true },
-    (err, updatedModel) => {
-      res.redirect("/");
-    }
-  );
+// app.put("/:id", (req, res) => {
+//   Shade.findByIdAndUpdate(
+//     req.params.id,
+//     req.body,
+//     { new: true },
+//     (err, updatedModel) => {
+//       res.redirect("/");
+//     }
+//   );
+// });
+
+// Connect to Mongo &
+// Fix Depreciation Warnings from Mongoose
+// May or may not need these depending on your Mongoose version
+mongoose.connect(MONGODB_URI, () => {
+  console.log("connect to mongo");
 });
+
+//___________________
+//Listener
+//___________________
+app.listen(PORT, () => console.log("Listening on port:", PORT));

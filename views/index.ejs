@@ -7,20 +7,12 @@
       <% for (let i = 0; i < shades.length; i++) { %>
       <div class="shades-home-page">
         <h1><%=shades[i].name%></h1>
-        <a href="/shades/<%=shades[i].style%>">
+        <a href="/shades/<%=shades[i].id%>">
           <img src="<%=shades[i].image%>" />
         </a>
       </div>
-      <div class="button-div">
-        <form action="/<%=shades[i].id%>?_method=DELETE" method="POST">
-          <input type="submit" value="DELETE" />
-        </form>
-        <a href="/<%=shades[i].id%>/edit">
-          <button>EDIT</button>
-        </a>
-      </div>
+
+      <% } %>
     </div>
-    <% } %>
-  </div>
   </body>
 </html>
