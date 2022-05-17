@@ -3,25 +3,15 @@
   <%- include ('./partials/head.ejs') %>
   <body>
     <%- include ('./partials/nav.ejs') %>
+    <h1>Customize Your Name</h1>
     <div class="edit-container">
       <a href="<%=shades%>"></a>
       <h1><%=shades.name%></h1>
-      <img src="<%=shades.img%>" />
+      <img src="<%=shades.image%>" />
       <form action="/<%=shades.id%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%=shades.name%>" /><br />
-        Style:
-        <input type="text" name="style" value="<%=shades.style%>" /><br />
         Color:
         <input type="text" name="color" value="<%=shades.color%>" /><br />
-        Lens Color:<input
-          type="text"
-          name="lenscolor"
-          value="<%=shades.lensColor%>"
-        /><br />
-        Price:
-        <input type="text" name="price" value="<%=shades.price%>" /><br />
-        Image:
-        <input type="text" name="image" value="<%=shades.image%>" /><br />
         <div class="button-div">
           <input type="submit" value="Customize Shades" />
         </div>

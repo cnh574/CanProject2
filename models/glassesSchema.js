@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const glassesSchema = new Schema({
   name: String,
-  style: String,
   color: String,
-  lensColor: [String],
   price: Number,
+  advert: String,
+  productInfo: [String],
   image: String,
 });
 

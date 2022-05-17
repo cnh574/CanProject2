@@ -52,12 +52,12 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 // });
 
 // SEED DATA ROUTE
-// app.get("/seed", (req, res) => {
-//   Shade.create(seedData, (err, createdSeedData) => {
-//     console.log("data imported");
-//     res.redirect("/");
-//   });
-// });
+app.get("/seed", (req, res) => {
+  Shade.create(seedData, (err, createdSeedData) => {
+    console.log("data imported");
+    res.redirect("/");
+  });
+});
 
 // // NEW shades view  ROUTE
 app.get("/new", (req, res) => {
@@ -89,33 +89,33 @@ app.get("/shades/:id", (req, res) => {
   });
 });
 
-// // DELETE SPECIFIC shades ROUTE
-// app.delete("/:id", (req, res) => {
-//   Shade.findByIdAndRemove(req.params.id, (err, data) => {
-//     res.redirect("/");
-//   });
-// });
+// DELETE SPECIFIC shades ROUTE
+app.delete("/:id", (req, res) => {
+  Shade.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect("/");
+  });
+});
 
 // // EDIT EXISTING shades PAGE ROUTE
-// app.get("/:id/edit", (req, res) => {
-//   Shade.findById(req.params.id, (err, foundShades) => {
-//     res.render("edit.ejs", {
-//       shades: foundShades,
-//     });
-//   });
-// });
+app.get("/:id/edit", (req, res) => {
+  Shade.findById(req.params.id, (err, foundShades) => {
+    res.render("edit.ejs", {
+      shades: foundShades,
+    });
+  });
+});
 
 // // EDIT A SPECIFIC shades ROUTE
-// app.put("/:id", (req, res) => {
-//   Shade.findByIdAndUpdate(
-//     req.params.id,
-//     req.body,
-//     { new: true },
-//     (err, updatedModel) => {
-//       res.redirect("/");
-//     }
-//   );
-// });
+app.put("/:id", (req, res) => {
+  Shade.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedModel) => {
+      res.redirect("/");
+    }
+  );
+});
 
 // Connect to Mongo &
 // Fix Depreciation Warnings from Mongoose

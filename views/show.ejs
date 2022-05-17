@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <h1>Show page</h1>
-  </head>
-  <body></body>
+  <%- include ('./partials/head.ejs') %>
+  <body>
+    <%- include ('./partials/nav.ejs') %>
+
+    <div class="product-container">
+      <div class="img-container">
+        <a href="<%=shades%>"></a>
+        <img class="show-page img" src="<%= shades.image %>" alt="" />
+      </div>
+      <div class="product-info">
+        <h2><%=shades.name%></h2>
+        <p><%=shades.advert%></p>
+        <p><%=shades.productInfo%></p>
+        <div class="button-div">
+          <form action="/<%=shades.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE" />
+          </form>
+          <a href="/<%=shades.id%>/edit">
+            <button>Customize</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

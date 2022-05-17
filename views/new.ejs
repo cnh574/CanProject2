@@ -5,13 +5,22 @@
     <%- include ('./partials/nav.ejs') %>
     <div class="new-shadez-div">
       <h1>Create your Own Shades!</h1>
+
       <form action="/shades" method="POST">
         Name: <input type="text" name="name" /><br />
         Style: <input type="text" name="style" /><br />
-        Color: <input type="text" name="color" /><br />
-        Lens Color: <input type="text" name="lensColor" /><br />
-        Price: <input type="text" name="price" /><br />
-        Image: <input type="text" name="image" /><br />
+        <!-- Color: <input type="text" name="color" /><br /> -->
+        <label for="color">Color:</label>
+        <select name="color" id="pick-color">
+          <option value="pink">Pink</option>
+          <option value="green">Green</option>
+          <option value="cream">Cream</option>
+          <option value="glitter pink">Glitter Pink</option>
+          <option value="glitter green">Glitter Green</option>
+          <option value="silver">Silver</option>
+        </select>
+        <br /><br />
+        <input type="submit" value="Submit" /><br />
         <div class="create-button">
           <input type="submit" value="Create! " />
         </div>
