@@ -6,7 +6,7 @@ module.exports = [
     lensColor: ["Black", "Blue", "Green", "Purple", "Chrome"],
     price: 20,
     image:
-      "https://cdn.shopify.com/s/files/1/0068/1394/1833/products/Polarized_WeeFarers_Baby_Sunglasses_Pink_with_gray_-_front_720x.jpg?v=1555956965",
+      "https://cdn.shopify.com/s/files/1/0769/0373/products/2021-07-09_Roshambo_34_LensGrey-FramePink_e1c0bed4-d232-44bb-bc12-f80e3b13c70a_1024x1024.jpg?v=1627865202",
   },
   {
     name: "Biker Black Shadez",
