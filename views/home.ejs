@@ -1,59 +1,7 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-   
-    <title>Shadez for Dayz</title>
-<header class="head">
-      <nav class="nav">
-        <a href="/users/sessions/new">Log In</a>
-        /<a href="/users/new">Sign Up</a>
-      </nav>
-
-      <a href="/">
-        <h1 class="title">Shadez for Dayz</h1>
-      </a>
-    </header>
-    <style>
-      /* .bd-placeholder-img {
-        font-size: 8rem;
-        text-anchor: start;
-        -webkit-user-select: none;
-        color: yellow;
-        -moz-user-select: none;
-        user-select: none;
-      } */
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      /* .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 9rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: right;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      } */
-    </style>
-
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet" />
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"
-  ></script>
-
-
-  </head>
-  <body>
+    <%- include ('./partials/head.ejs') %>
+<body>
+    <%- include ('./partials/nav.ejs') %>
     <div class="container-welcome">
       <div class="px-4 pt-5 my-5 text-center border-bottom">
         <h1 class="welcome">Welcome</h1>
@@ -65,9 +13,12 @@
             options with a personalized touch to fit their personality.
           </p>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
+            <a href="https://aqueous-ravine-39923.herokuapp.com/index">
+                <button>shop</button>
+              </a>
+            <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
               Shop now!
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
