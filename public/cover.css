@@ -219,7 +219,7 @@ header p {
 /* NEW PAGE */
 
 .new-container {
-  height: 20rem;
+  height: 50rem;
   background-color: rgb(249, 184, 195);
   border: solid lightgrey;
   border-width: 8px 0;
@@ -227,4 +227,25 @@ header p {
   color: whitesmoke;
   font-size: 25px;
   text-align: center;
+}
+
+/* Show Page */
+.product-container {
+  height: 50rem;
+  background-color: rgb(249, 184, 195);
+  border: solid lightgrey;
+  border-width: 8px 0;
+  margin: 1em auto;
+  color: whitesmoke;
+  font-size: 25px;
+  text-align: center;
+}
+
+show-page-img {
+  width: 50%;
+  height: auto;
+  text-align: justify;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
 }
