@@ -1,11 +1,11 @@
 /* GENERAL STYLING */
-body {
+/* body {
   margin: 0;
   background-color: lightseagreen;
 }
 
 /* NAV BAR STYLING */
-nav {
+/* nav {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
@@ -13,11 +13,11 @@ nav {
   border-bottom: 5px solid lightgreen;
   font-family: "Patrick Hand", cursive;
   font-weight: bolder;
-}
+} */
 
 /* HOME PAGE STYLING */
-.container {
+/* .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
+}  */
