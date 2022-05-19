@@ -21,7 +21,7 @@ body {
   display: flex;
   color: black;
   cursor: pointer;
-  background-color: rgb(247, 205, 205);
+  background-color: rgb(251, 142, 142);
   padding: 1em;
   margin: 1em;
   font-weight: bolder;
@@ -234,7 +234,7 @@ header p {
 .show-img {
   display: block;
   width: 50%;
-  height: 70%;
+  height: 50%;
   border: 7px solid rgb(255, 202, 134);
   margin-left: auto;
   margin-right: auto;
@@ -247,8 +247,12 @@ header p {
   display: flex;
   color: black;
   cursor: pointer;
-  background-color: rgb(247, 205, 205);
+  background-color: rgb(251, 142, 142);
   padding: 1em;
   margin: 1em;
   font-weight: bolder;
+}
+.button-div {
+  display: flex;
+  justify-content: center;
 }
