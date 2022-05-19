@@ -4,14 +4,11 @@
   <body>
     <%- include ('./partials/nav.ejs') %>
     <div class="edit-container">
-      <h1 class="edit-title">Customize Your Name</h1>
+      <h1 class="edit-title">Add Your Name</h1>
       <a href="<%=shades%>"></a>
-      <h1><%=shades.name%></h1>
       <img class="edit-img" src="<%=shades.image%>" />
       <form action="/<%=shades.id%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%=shades.name%>" /><br />
-        Color:<input type="text" name="color" value="<%=shades.color%>" /><br />
-        <div class="edit-button">
           <input class="edit" type="submit" value="Customize Shades" />
         </div>
       </form>
