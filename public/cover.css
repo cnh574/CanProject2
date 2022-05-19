@@ -18,6 +18,7 @@ body {
   cursor: pointer;
 }
 * button {
+  display: flex;
   color: black;
   cursor: pointer;
   background-color: rgb(247, 205, 205);
@@ -225,25 +226,29 @@ header p {
   border: solid lightgrey;
   border-width: 8px 0;
   margin: 1em auto;
-  color: whitesmoke;
+  color: lightyellow;
   font-size: 25px;
   text-align: center;
 }
 
 .show-img {
   display: block;
-  width: 70%;
+  width: 50%;
   height: 70%;
   border: 7px solid rgb(255, 202, 134);
   margin-left: auto;
   margin-right: auto;
 }
 
-/* .img-show {
-  display: block;
-  width: 70%;
-  height: 70%;
-  border: 7px solid rgb(255, 202, 134);
-  margin-left: auto;
-  margin-right: auto;
-} */
+.shades-title {
+  margin: 1em;
+}
+.delete {
+  display: flex;
+  color: black;
+  cursor: pointer;
+  background-color: rgb(247, 205, 205);
+  padding: 1em;
+  margin: 1em;
+  font-weight: bolder;
+}
