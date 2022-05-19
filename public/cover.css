@@ -122,17 +122,6 @@ body {
     (0 0 0 / 15%);
 }
 
-.b-example-vr {
-  flex-shrink: 0;
-  width: 7.5rem;
-  height: 100vh;
-}
-
-.bi {
-  vertical-align: -0.125em;
-  fill: currentColor;
-}
-
 /* .nav-scroller {
   position: relative;
   z-index: 2;
