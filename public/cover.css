@@ -186,6 +186,7 @@ header p {
 /* INDEX PAGE */
 .container-index {
   background-color: rgb(249, 184, 195);
+  color: white;
 }
 
 .img-index {
@@ -201,7 +202,7 @@ header p {
   display: block;
   width: 70%;
   height: 70%;
-  border: 5px solid rgb(255, 202, 134);
+  border: 7px solid rgb(255, 202, 134);
   margin-left: auto;
   margin-right: auto;
 }
