@@ -28,7 +28,7 @@
         /<a href="/users/new">Sign Up</a>
       </nav>
 
-      <a href="/index">
+      <a href="/">
         <h1 class="title">Shadez for Dayz</h1>
       </a>
     </header>
@@ -81,14 +81,6 @@
             shades. Your children will surely love our variety of colorful
             options with a personalized touch to fit their personality.
           </p>
-          <div class="button-div">
-            <form action="/<%=shades.id%>?_method=DELETE" method="POST">
-              <input type="submit" value="DELETE" />
-            </form>
-            <a href="/<%=shades.id%>/edit">
-              <button>Customize</button>
-            </a>
-          </div>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
             <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
               Shop now!
@@ -117,10 +109,13 @@
               summer ready accessories.
             </p>
           </div>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-            <a href="<%=shades%>"></a>
+          <<div class="button-div">
+            <form action="/<%=shades.id%>?_method=DELETE" method="POST">
+              <input type="submit" value="DELETE" />
+            </form>
             <a href="/<%=shades.id%>/edit">
-                <button type="button" class="customize">Customize</button>
+              <button>Customize</button>
+            </a>
           </div>
         </div>
       </div>

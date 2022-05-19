@@ -215,3 +215,16 @@ header p {
   font-family: "Patrick Hand", cursive;
   font-weight: bolder;
 }
+
+/* NEW PAGE */
+
+.new-container {
+  height: 20rem;
+  background-color: rgb(249, 184, 195);
+  border: solid lightgrey;
+  border-width: 8px 0;
+  margin: 1em auto;
+  color: whitesmoke;
+  font-size: 25px;
+  text-align: center;
+}
