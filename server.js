@@ -55,7 +55,7 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 app.get("/seed", (req, res) => {
   Shade.create(seedData, (err, createdSeedData) => {
     console.log("data imported");
-    res.redirect("/");
+    res.redirect("/index");
   });
 });
 
@@ -71,12 +71,12 @@ app.get("/home", (req, res) => {
 // // CREATE NEW Shades  post ROUTE
 app.post("/", (req, res) => {
   Shade.create(req.body, (error, createdshades) => {
-    res.redirect("/");
+    res.redirect("/index");
   });
 });
 
 // // GET ALL shades FOR INDEX ROUTE
-app.get("/", (req, res) => {
+app.get("/index", (req, res) => {
   Shade.find({}, (error, allShades) => {
     res.render("index.ejs", {
       shades: allShades,
@@ -96,7 +96,7 @@ app.get("/shades/:id", (req, res) => {
 // DELETE SPECIFIC shades ROUTE
 app.delete("/:id", (req, res) => {
   Shade.findByIdAndRemove(req.params.id, (err, data) => {
-    res.redirect("/");
+    res.redirect("/index");
   });
 });
 
@@ -116,7 +116,7 @@ app.put("/:id", (req, res) => {
     req.body,
     { new: true },
     (err, updatedModel) => {
-      res.redirect("/");
+      res.redirect("/index");
     }
   );
 });
