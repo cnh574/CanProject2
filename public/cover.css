@@ -230,20 +230,20 @@ header p {
   text-align: center;
 }
 
-.show-img {
+/* .show-img {
   display: block;
   width: 70%;
   height: 70%;
   border: 7px solid rgb(255, 202, 134);
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 .img-show {
-  width: 50%;
-  height: auto;
-  text-align: justify;
-  background-color: transparent;
+  display: block;
+  width: 70%;
+  height: 70%;
+  border: 7px solid rgb(255, 202, 134);
   margin-left: auto;
   margin-right: auto;
 }
