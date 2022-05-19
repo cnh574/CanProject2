@@ -14,10 +14,10 @@
         <p><%=shades.advert%></p>
         <p><%=shades.productInfo%></p>
         <div class="button-div">
-          <form action="/index<%=shades.id%>?_method=DELETE" method="POST">
+          <form action="/<%=shades.id%>?_method=DELETE" method="POST">
             <input class="delete" type="submit" value="Delete" />
           </form>
-          <a href="/index<%=shades.id%>/edit">
+          <a href="/<%=shades.id%>/edit">
             <button>Customize</button>
           </a>
         </div>
