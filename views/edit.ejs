@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <%- include ('./partials/head.ejs') %>
   <body>
@@ -8,7 +8,7 @@
       <a href="<%=shades%>"></a>
       <h1><%=shades.name%></h1>
       <img src="<%=shades.image%>" />
-      <form action="/<%=shades.id%>?_method=PUT" method="POST">
+      <form action="/index<%=shades.id%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%=shades.name%>" /><br />
         Color:
         <input type="text" name="color" value="<%=shades.color%>" /><br />
