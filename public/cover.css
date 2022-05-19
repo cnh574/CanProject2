@@ -67,9 +67,8 @@ body {
 }
 
 .container-add-name {
-  height: 60rem;
+  height: 20rem;
   background-color: rgb(249, 184, 195);
-  /* rgb(50, 197, 197) */
   border: solid lightgrey;
   border-width: 8px 0;
   margin: 1em auto;
@@ -220,8 +219,8 @@ header p {
 }
 .show-img2 {
   display: block;
-  width: 30%;
-  height: 30%;
+  width: 50%;
+  height: 50%;
   border: 7px solid rgb(255, 202, 134);
   margin-left: auto;
   margin-right: auto;
