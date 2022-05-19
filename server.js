@@ -69,9 +69,9 @@ app.get("/home", (req, res) => {
 });
 
 // // CREATE NEW Shades  post ROUTE
-app.post("/", (req, res) => {
+app.post("/index", (req, res) => {
   Shade.create(req.body, (error, createdshades) => {
-    res.redirect("/index");
+    res.redirect("/home");
   });
 });
 
