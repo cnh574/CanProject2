@@ -52,12 +52,12 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 // });
 
 // SEED DATA ROUTE
-app.get("/seed", (req, res) => {
-  Shade.create(seedData, (err, createdSeedData) => {
-    console.log("data imported");
-    res.redirect("/index");
-  });
-});
+// app.get("/seed", (req, res) => {
+//   Shade.create(seedData, (err, createdSeedData) => {
+//     console.log("data imported");
+//     res.redirect("/index");
+//   });
+// });
 
 // // NEW shades view  ROUTE
 app.get("/new", (req, res) => {
@@ -69,7 +69,7 @@ app.get("/home", (req, res) => {
 });
 
 // // CREATE NEW Shades  post ROUTE
-app.post("/", (req, res) => {
+app.post("/index", (req, res) => {
   Shade.create(req.body, (error, createdshades) => {
     res.redirect("/index");
   });
