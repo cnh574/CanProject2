@@ -277,3 +277,39 @@ header p {
   display: flex;
   justify-content: center;
 }
+/* edit page  */
+.edit-container {
+  height: 50rem;
+  background-color: rgb(249, 184, 195);
+  border: solid lightgrey;
+  border-width: 8px 0;
+  margin: 1em auto;
+  color: lightyellow;
+  font-size: 25px;
+  text-align: center;
+}
+
+.edit-title {
+  margin: 1em;
+}
+.edit-img {
+  display: block;
+  width: 40%;
+  height: 50%;
+  border: 7px solid rgb(255, 202, 134);
+  margin-left: auto;
+  margin-right: auto;
+}
+.edit {
+  display: flex;
+  color: black;
+  cursor: pointer;
+  background-color: rgb(251, 142, 142);
+  padding: 1em;
+  margin: 1em;
+  font-weight: bolder;
+}
+edit-button {
+  display: flex;
+  justify-content: center;
+}

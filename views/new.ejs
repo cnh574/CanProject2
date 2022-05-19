@@ -7,13 +7,22 @@
       <h1 class="new-title">Create your Own Shades!</h1>
       <img
         class="show-img2"
-        src="https://i.etsystatic.com/25059162/r/il/050bd0/3847703911/il_1588xN.3847703911_tnsc.jpg"
+        src="https://i.etsystatic.com/32037986/r/il/7c3215/3410874882/il_1588xN.3410874882_1gh1.jpg"
         alt=""
       />
-      <form action="/index" method="POST">
+      <form action="/" method="POST">
         Name: <input type="text" name="name" /><br />
-        <!-- Style: <input type="text" name="style" /><br /> -->
-        <!-- Color: <input type="text" name="color" /><br /> -->
+        Style: <input type="text" name="style" /><br />
+        <label for="style">Style:</label>
+        <select name="Style" id="pick-style">
+          <option value="round">Round</option>
+          <option value="wafer">wafer</option>
+          <option value="sunflowers">Sunflowers</option>
+          <option value="hearts">hearts</option>
+          <option value="unicorn">Unicorn</option>
+        </select>
+        <br /><br />
+        Color: <input type="text" name="color" /><br />
         <label for="color">Color:</label>
         <select name="color" id="pick-color">
           <option value="pink">Pink</option>
