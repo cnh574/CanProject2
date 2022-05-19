@@ -238,3 +238,12 @@ header p {
   margin-left: auto;
   margin-right: auto;
 }
+
+.img-show {
+  width: 50%;
+  height: auto;
+  text-align: justify;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
