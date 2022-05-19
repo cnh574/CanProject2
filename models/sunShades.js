@@ -4,7 +4,7 @@ module.exports = [
     color: "pink",
     price: 20,
     advert:
-      "Getready for those Sunny Summer days with our stylish Fashion Shades ",
+      "Get ready for those Sunny Summer days with our stylish Fashion Shades ",
     productInfo: [
       "Certified BPA, lead, cadmium, phthalate and latex free! Toxicant free and no unnecessary paint!",
       "Material is specially designed with kids in mind: durable, flexible, ultra light, and comfortable.",

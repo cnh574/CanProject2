@@ -5,7 +5,11 @@
     <%- include ('./partials/nav.ejs') %>
     <div class="new-container">
       <h1 class="new-title">Create your Own Shades!</h1>
-
+      <img
+        class="show-img2"
+        src="https://i.etsystatic.com/25059162/r/il/050bd0/3847703911/il_1588xN.3847703911_tnsc.jpg"
+        alt=""
+      />
       <form action="/index" method="POST">
         Name: <input type="text" name="name" /><br />
         <!-- Style: <input type="text" name="style" /><br /> -->
@@ -21,7 +25,7 @@
         </select>
         <br /><br />
         <div class="create-button">
-          <input type="submit" value="Create! " />
+          <input class="new" type="submit" value="Create! " />
         </div>
       </form>
     </div>

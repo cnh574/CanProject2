@@ -214,9 +214,26 @@ header p {
   border: solid lightgrey;
   border-width: 8px 0;
   margin: 1em auto;
-  color: whitesmoke;
+  color: lightyellow;
   font-size: 25px;
   text-align: center;
+}
+.show-img2 {
+  display: block;
+  width: 40%;
+  height: 50%;
+  border: 7px solid rgb(255, 202, 134);
+  margin-left: auto;
+  margin-right: auto;
+}
+.new {
+  display: flex;
+  color: black;
+  cursor: pointer;
+  background-color: rgb(251, 142, 142);
+  padding: 1em;
+  margin: 1em;
+  font-weight: bolder;
 }
 
 /* Show Page */
@@ -233,7 +250,7 @@ header p {
 
 .show-img {
   display: block;
-  width: 50%;
+  width: 40%;
   height: 50%;
   border: 7px solid rgb(255, 202, 134);
   margin-left: auto;
