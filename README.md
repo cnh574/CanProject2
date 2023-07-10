@@ -15,7 +15,7 @@ New page -allows you to create a brand new shades with options for different sty
 Home page- welcome page displaying different thing user can do on site as far as browsing collection, customizing shades and creating new shades. 
 
 Installation:
-1.Create new repo on gihub, clone repo, add project folder, add and commit changes , push to main, open new browser and paste in the name of new repo / "Project folder name"
+1.Create new repo on github, clone repo, add project folder, add and commit changes , push to main, open new browser and paste in the name of new repo / "Project folder name"
 2. Mongodb: Creat account and link to code editor to have database crated and data imported. 
 3. Creat Heroku account and delpoy project
 
